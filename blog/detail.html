@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="windows-1251">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gorami</title>
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/styles/tiny-slider.css">
+  <link rel="stylesheet" href="/template_styles.css">
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  <script src="/js/tiny-slider.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=424e8338-02d6-4172-8698-59b1cd6343d4&lang=ru_RU" type="text/javascript"></script>  
+  <script src="/script.js"></script>
+</head>
+<body>
+  <div class="loader">
+    <img src="/images/icons/icon.svg" width="300">
+  </div>
+  <header class="header limiter">
+    <a href="/"><img class="header_logo" src="/images/logo.svg"></a>
+    <nav class="header_menu">
+      <ul class="header_menu-list">
+        <li class="header_submenu">
+          <a href="/rental/">Прокат</a>
+          <ul>
+            <li><a href="/rental/snowboard/">Прокат сноубордов</a></li>
+            <li><a href="/rental/ski/">Прокат горных лыж</a></li>
+            <li><a href="/rental/clothing/">Прокат одежды</a></li>
+            <li><a href="/rental/accessories/">Прокат аксессуаров</a></li>
+          </ul>
+        </li>
+        <li><a href="/service/">Сервис</a></li>
+        <li><a href="/prices/">Цены</a></li>
+        <li class="header_submenu">
+          <a href="/about/">О нас</a>
+          <ul>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/about/conditions/">Условия проката</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Блог</a></li>
+        <li><a href="/contacts/">Контакты</a></li>
+      </ul>
+      <div class="burger">
+        <div class="burger_icon"></div>
+        <ul class="burger_menu popup-menu"></ul>
+      </div>
+    </nav>
+    <div class="header_contacts">
+      <div class="header_phone">
+        <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+        <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+      </div>
+      <div class="header_address">
+        <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+        <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+      </div>
+    </div>
+    <div class="mobile_burger">
+      <div class="burger_icon"></div>
+    </div>
+    <div class="mobile_sidebar limiter">
+      <div class="mobile_sidebar-header">
+        <img class="header_logo" src="/images/logo.svg">
+        <div class="mobile_burger">
+          <div class="burger_icon"></div>
+        </div>
+      </div>
+      <nav class="mobile_menu">
+        <ul>
+          <li class="mobile_submenu">
+            <a href="/rental/">Прокат</a>
+            <div class="submenu">
+              <div class="submenu_back">Прокат</div>
+              <ul>
+                <li><a href="/rental/snowboard/">Сноубордов</a></li>
+                <li><a href="/rental/ski/">Горных лыж</a></li>
+                <li><a href="/rental/clothing/">Одежды</a></li>
+                <li><a href="/rental/accessories/">Аксессуаров</a></li>
+              </ul>
+              <div class="mobile_contacts">
+                <div class="header_phone">
+                  <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+                  <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+                </div>
+                <div class="header_address">
+                  <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+                  <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/service/">Сервис</a></li>
+          <li><a href="/prices/">Цены</a></li>
+          <li class="mobile_submenu">
+            <a href="/about/">О нас</a>
+            <div class="submenu">
+              <div class="submenu_back">О нас</div>
+              <ul>
+                <li><a href="/about/">О компании</a></li>
+                <li><a href="/about/conditions/">Условия проката</a></li>
+              </ul>
+              <div class="mobile_contacts">
+                <div class="header_phone">
+                  <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+                  <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+                </div>
+                <div class="header_address">
+                  <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+                  <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog/">Блог</a></li>
+          <li><a href="/contacts/">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="mobile_contacts">
+        <div class="header_phone">
+          <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+          <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+        </div>
+        <div class="header_address">
+          <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+          <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="subheader">
+      <div class="limiter">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="/">Главная</a>
+          </li>
+          <li>
+            <a href="/blog/">Блог</a>
+          </li>
+          <li>Сорочаны</li>
+        </ul>
+        <h1>Сорочаны</h1>
+      </div>
+    </div>
+    <div class="blog_detail">
+      <div class="blog_detail-container limiter">
+        <div class="blog_detail-left">
+          <section class="detail_first">
+            <img src="/images/blog_detail-first.jpg">
+            <p>Впечатляющий горнолыжный курорт. Работа мастеров создала величественные склоны, привлекающие внимание любителей экстремальных видов спорта.</p>
+          </section>
+          <section class="detail_section">
+            <div class="hgroup">
+              <h2>Особенности</h2>
+            </div>
+            <div class="detail_section-text">
+              <img src="/images/blog_detail_2.jpg">
+              <div>
+                <p>На настоящий момент из одиннадцати трасс работают шесть и тюбинг. Среди них есть учебные, легкие и средние). Использование собственных ватрушек на курорте запрещено, склоны можно посетить только на арендованном снаряжении. Склон для тюбинга довольно крутой, продолжительность его составляет 300 метров. В результате спуск по нему довольно быстрый. После этого ватрушка влетает на травалатор, по которой снова поднимается вверх.</p>
+                <p>Это развлечение очень радует детей и тех, кто не рискует кататься на крутых склонах для лыжников и сноубордистов. Свист ветра, острые ощущения и азарт спуска доступен для туристов любого уровня подготовки.</p>
+              </div>
+            </div>
+          </section>
+          <section class="detail_section">
+            <div class="hgroup">
+              <h2>Для кого подойдёт</h2>
+            </div>
+            <div class="detail_section-text">
+              <div>
+                <p>Курорт давно называют «подмосковной Швейцарией», хотя возможности для роста и улучшения еще далеко не исчерпаны.</p>
+                <p>Длинные разнообразные трассы не дадут заскучать ни новичку, ни профессионалу горнолыжного спорта.</p>
+                <p>Без лыж или доски прокатиться на канатной дороге не получится. По правилам курорта таких туристов сотрудники на канатку не допускают.</p>
+                <p>Выгодно выделяет курорт среди других его крытый комплекс, оборудованный лавочками, пунктом проката. Внутри расположены магазин и столовая. Особенно это выглядит привлекательно сейчас, когда из-за пандемии и ограничений многие курорты закрыли свои вспомогательные помещения.</p>
+                <p>Работа ведется в полном соответствии с санитарными требованиями, а значительная площадь дает возможность свободного соблюдения требований о социальной дистанции.</p>
+              </div>
+              <img src="/images/blog_detail_3.jpg">
+            </div>
+          </section>
+          <section  class="detail_last-section">
+            <div class="hgroup">
+              <h2>Инфраструктура</h2>
+            </div>
+            <div>
+              <p>В будние дни питание курортников обеспечено только столовой в центральном здании, в пятницу и выходные открываются еще два кафе и ресторан.</p>
+              <p>Для детей, которые не катаются, предлагают целый комплекс развлечений. На территории курорта расположены классические горки, игровая комната и танкодром. Хотя все равно большинство родителей пытается привлечь детей к своему любимому виду отдыха.</p>
+              <p>Многие туристы приезжают сюда на несколько дней. Эта возможность поддерживается отелями и апартаментами в поселках Курово, Ильинский и Шустино. А в расположенном неподалеку Дмитрове еще более широкий выбор средств размещения при гораздо низших ценах.</p>
+            </div>
+          </section>
+          <section class="detail_gallery">
+            <div class="hgroup">
+              <h2>Галерея</h2>
+            </div>
+            <div class="detail_gallery-container">
+              <div class="detail_slider">
+                <img src="/images/blog_gallery_1.jpg">
+                <img src="/images/blog_gallery_2.jpg">
+                <img src="/images/blog_gallery_1.jpg">
+                <img src="/images/blog_gallery_2.jpg">
+              </div>
+              <div class="detail_slider-nav">
+                <button class="detail_slider-left"></button>
+                <button class="detail_slider-right"></button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="blog_detail-right">
+          <div class="blog_detail-banners">
+            <div class="blog_detail-banner" style="background-image: url('/images/blog_banner_1.jpg')">Баннер 1</div>
+            <div class="blog_detail-banner" style="background-image: url('/images/blog_banner_2.jpg')">Баннер 2</div>
+            <div class="blog_detail-banner" style="background-image: url('/images/blog_banner_3.jpg')">Баннер 3</div>
+          </div>
+        </div>
+      </div>
+      <section class="blog_more limiter">
+        <div class="hgroup">
+          <h2>Читайте также</h2>
+        </div>
+        <div class="main_blog-list">
+          <div class="main_blog-item">
+            <img src="/images/main_blog_1.jpg">
+            <div class="main_blog-text">
+              <h4>Степаново</h4>
+              <p>В начале 2000-х открыт горнолыжный курорт «Степаново» в Подмосковье</p>
+              <a class="link" href="/blog/detail.html">Читать дальше</a>
+            </div>
+          </div>
+          <div class="main_blog-item">
+            <img src="/images/main_blog_2.jpg">
+            <div class="main_blog-text">
+              <h4>Сорочаны</h4>
+              <p>Работа мастеров создала величественные склоны, привлекающие внимание любителей экстремальных видов спорта.</p>
+              <a class="link" href="/blog/detail.html">Читать дальше</a>
+            </div>
+          </div>
+          <div class="main_blog-item">
+            <img src="/images/main_blog_3.jpg">
+            <div class="main_blog-text">
+              <h4>Шуколово</h4>
+              <p>Один из самых известных горнолыжных курортов Подмосковья организован Леонидом Тягачевым более пятидесяти лет назад. </p>
+              <a class="link" href="/blog/detail.html">Читать дальше</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <section class="contacts limiter">
+      <div class="hgroup">
+        <h2>Есть вопросы? Мы на связи!</h2>
+      </div>
+      <div class="contacts_content">
+        <div class="contacts_row">
+          <div class="contacts_col">
+            <img src="/images/icons/place.svg">
+            <div class="contacts_text">
+              <h4>Адрес</h4>
+              <div class="contact_content">
+                <p>Дмитровское шоссе, пгт. Икша, Набережная улица, 10</p>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_col">
+            <img src="/images/icons/time.svg" loading="lazy">
+            <div class="contacts_text">
+              <h4>Часы работы</h4>
+              <div class="contact_content">
+                <p>Ежедневно с 10:00 до 03:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts_row">
+          <div class="contacts_col">
+            <img src="/images/icons/phone.svg" loading="lazy">
+            <div class="contacts_text">
+              <h4>Телефон</h4>
+              <div class="contact_content">
+                <a href="tel:+74951202489">+7 (495) 120 24 89</a>
+                <a href="tel:+79651096949">+7 (965) 109 69 49</a>
+                <a href="tel:+79060398422">+7 (906) 039 84 22</a>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_col">
+            <img src="/images/icons/mail.svg">
+            <div class="contacts_text">
+              <h4>E-mail</h4>
+              <div class="contact_content">
+                <a href="mailto:snowboard@snow-prokat.ru">snowboard@snow-prokat.ru</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts_row">
+          <div class="contacts_col">
+            <div class="contacts_text">
+              <h4>Сервисный центр:</h4>
+              <div class="contact_content">
+                <a href="tel+79252004060">+7 (925) 200 40 60</a>
+                <div class="contacts-links">
+                  <a href="#">
+                    <img src="/images/icons/telegram.svg" loading="lazy">
+                  </a>
+                  <a href="#">
+                    <img src="/images/icons/whatsapp.svg" loading="lazy">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_col">
+            <div class="contacts_text">
+              <h4>Мы в соцсетях:</h4>
+              <div class="contact_content">
+                <div class="contacts-links">
+                  <a href="#">
+                    <img src="/images/icons/vk.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts_map" id="map"></div>
+    </section>
+    <section class="footer_content limiter">
+      <div class="footer_col">
+        <span><img class="footer_logo" src="/images/logo.svg" loading="lazy"></span>
+        <div class="footer_contacts">
+          <div class="header_phone">
+            <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+            <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+          </div>
+          <div class="header_address">
+            <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+            <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+          </div>
+        </div>
+        <div class="footer_copyright">Copyright © 2022 DoSki</div>
+      </div>
+      <nav class="footer_col footer_halfcol">
+        <ul class="footer_menu">
+          <li class="footer_menu-section"><a href="/rental/">Прокат</a></li>
+          <li><a href="/rental/snowboard/">Сноубордов</a></li>
+          <li><a href="/rental/ski/">Горных лыж</a></li>
+          <li><a href="/rental/clothing/">Одежды</a></li>
+          <li><a href="/rental/accessories/">Аксессуаров</a></li>
+        </ul>
+      </nav>
+      <nav class="footer_col footer_halfcol">
+        <ul class="footer_menu">
+          <li class="footer_menu-section"><a href="/about/">О нас</a></li>
+          <li><a href="/about/">О компании</a></li>
+          <li><a href="/about/conditions/">Условия проката</a></li>
+        </ul>
+      </nav>
+      <nav class="footer_col">
+        <ul class="footer_menu">
+          <li class="footer_menu-section"><a href="/service/">Сервис</a></li>
+          <li class="footer_menu-section"><a href="/prices/">Цены</a></li>
+          <li class="footer_menu-section"><a href="/blog/">Блог</a></li>
+          <li class="footer_menu-section"><a href="/contacts/">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer_col">
+        <div class="contacts_text">
+          <h4>Мы в соцсетях:</h4>
+          <div class="contact_content">
+            <div class="contacts-links">
+              <a href="#">
+                <img src="/images/icons/vk.svg" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contacts_text">
+          <h4>Сервисный центр:</h4>
+          <div class="contact_content">
+            <div class="contacts-links">
+              <a href="#">
+                <img src="/images/icons/telegram.svg" loading="lazy">
+              </a>
+              <a href="#">
+                <img src="/images/icons/whatsapp.svg" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <div class="fixed_button" data-modal="calculator"></div>
+  <div class="overlay"></div>
+  <div class="modal calculator" data-id="calculator">
+    <div class="close"></div>
+    <h2>Выберите количество суток и нужное снаряжение</h2>
+    <div class="calculator_content">
+      <div class="calculator_left">
+        <div class="calculator_time">
+          <button class="button_time active" data-day="1">1 сутки</button>
+          <button class="button_time" data-day="2">2 суток</button>
+          <button class="button_time" data-day="3">3 суток</button>
+          <button class="button_time" data-day="4">4 суток</button>
+          <button class="button_time" data-day="5">5 суток</button>
+          <button class="button_time" data-day="6">6 суток</button>
+          <button class="button_time" data-day="7">7 суток</button>
+          <input class="input_time" data-day="0" type="number" placeholder="Ввести (до 30 суток)" min="1" max="30">
+        </div>
+        <div class="calculator_bottom">
+          Итого: <span class="calculator_sum">0</span> &#8381;
+        </div>
+      </div>
+      <div class="calculator_right">
+        <div class="calculator_inventory">
+          <div class="calculator_inventory-item">
+            <h4>Комплект:<br> Горные лыжи / Сноуборд / Ботинки</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="900"  data-2="1700" data-3="2400" data-4="3000" data-5="3600" data-6="4200" data-7="4800">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Горные лыжи</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="700"  data-2="1100" data-3="1500" data-4="1900" data-5="2300" data-6="2700" data-7="3100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Сноуборд</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="700"  data-2="1100" data-3="1500" data-4="1900" data-5="2300" data-6="2700" data-7="3100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Маска</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="200"  data-2="350" data-3="500" data-4="650" data-5="800" data-6="950" data-7="1100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Ботинки</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="400"  data-2="700" data-3="900" data-4="1100" data-5="1300" data-6="1500" data-7="1700">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Шлем</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="200"  data-2="350" data-3="500" data-4="650" data-5="800" data-6="950" data-7="1100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Перчатки</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="100"  data-2="150" data-3="200" data-4="250" data-5="300" data-6="350" data-7="400">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Куртка</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="300"  data-2="500" data-3="700" data-4="900" data-5="1100" data-6="1300" data-7="1500">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Штаны</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="300"  data-2="500" data-3="700" data-4="900" data-5="1100" data-6="1300" data-7="1500">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Куртка + штаны</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="500"  data-2="900" data-3="1300" data-4="1700" data-5="2100" data-6="2500" data-7="2900">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator_bottom calculator_bottom__mobile">
+        Итого: <span class="calculator_sum">0</span> &#8381;
+      </div>
+    </div>
+  </div>
+</body>
+</html>

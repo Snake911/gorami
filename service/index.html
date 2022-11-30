@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="windows-1251">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gorami</title>
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/styles/tiny-slider.css">
+  <link rel="stylesheet" href="/template_styles.css">
+  <script src="/js/jquery-3.6.0.min.js"></script>
+  <script src="/js/tiny-slider.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=424e8338-02d6-4172-8698-59b1cd6343d4&lang=ru_RU" type="text/javascript"></script>  
+  <script src="/script.js"></script>
+</head>
+<body>
+  <div class="loader">
+    <img src="/images/icons/icon.svg" width="300">
+  </div>
+  <header class="header limiter">
+    <a href="/"><img class="header_logo" src="/images/logo.svg"></a>
+    <nav class="header_menu">
+      <ul class="header_menu-list">
+        <li class="header_submenu">
+          <a href="/rental/">Прокат</a>
+          <ul>
+            <li><a href="/rental/snowboard/">Прокат сноубордов</a></li>
+            <li><a href="/rental/ski/">Прокат горных лыж</a></li>
+            <li><a href="/rental/clothing/">Прокат одежды</a></li>
+            <li><a href="/rental/accessories/">Прокат аксессуаров</a></li>
+          </ul>
+        </li>
+        <li><a href="/service/">Сервис</a></li>
+        <li><a href="/prices/">Цены</a></li>
+        <li class="header_submenu">
+          <a href="/about/">О нас</a>
+          <ul>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/about/conditions/">Условия проката</a></li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Блог</a></li>
+        <li><a href="/contacts/">Контакты</a></li>
+      </ul>
+      <div class="burger">
+        <div class="burger_icon"></div>
+        <ul class="burger_menu popup-menu"></ul>
+      </div>
+    </nav>
+    <div class="header_contacts">
+      <div class="header_phone">
+        <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+        <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+      </div>
+      <div class="header_address">
+        <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+        <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+      </div>
+    </div>
+    <div class="mobile_burger">
+      <div class="burger_icon"></div>
+    </div>
+    <div class="mobile_sidebar limiter">
+      <div class="mobile_sidebar-header">
+        <img class="header_logo" src="/images/logo.svg">
+        <div class="mobile_burger">
+          <div class="burger_icon"></div>
+        </div>
+      </div>
+      <nav class="mobile_menu">
+        <ul>
+          <li class="mobile_submenu">
+            <a href="/rental/">Прокат</a>
+            <div class="submenu">
+              <div class="submenu_back">Прокат</div>
+              <ul>
+                <li><a href="/rental/snowboard/">Сноубордов</a></li>
+                <li><a href="/rental/ski/">Горных лыж</a></li>
+                <li><a href="/rental/clothing/">Одежды</a></li>
+                <li><a href="/rental/accessories/">Аксессуаров</a></li>
+              </ul>
+              <div class="mobile_contacts">
+                <div class="header_phone">
+                  <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+                  <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+                </div>
+                <div class="header_address">
+                  <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+                  <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/service/">Сервис</a></li>
+          <li><a href="/prices/">Цены</a></li>
+          <li class="mobile_submenu">
+            <a href="/about/">О нас</a>
+            <div class="submenu">
+              <div class="submenu_back">О нас</div>
+              <ul>
+                <li><a href="/about/">О компании</a></li>
+                <li><a href="/about/conditions/">Условия проката</a></li>
+              </ul>
+              <div class="mobile_contacts">
+                <div class="header_phone">
+                  <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+                  <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+                </div>
+                <div class="header_address">
+                  <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+                  <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="/blog/">Блог</a></li>
+          <li><a href="/contacts/">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="mobile_contacts">
+        <div class="header_phone">
+          <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+          <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+        </div>
+        <div class="header_address">
+          <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+          <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="subheader">
+      <div class="limiter">
+        <ul class="breadcrumbs">
+          <li>
+            <a href="/">Главная</a>
+          </li>
+          <li>Сервис</li>
+        </ul>
+        <h1>Сервис</h1>
+      </div>
+    </div>
+    <div class="service_screen">
+      <div class="service_screen-text limiter">
+        <h2>Обслуживание горных лыж и сноубордов</h2>
+        <p>Для длительной службы оборудования, лучшего хода по ровной поверхности и крутым склонам необходима специальная подготовка.</p>
+        <a class="button button__full-green" href="tel:+74951202489">Позвонить</a>
+        <div class="main_service-contacts">
+          <p>Перейти в диалог с мастером:</p>
+          <div class="main_service-links">
+            <a href="#">
+              <img src="/images/icons/telegram.svg">
+            </a>
+            <a href="#">
+              <img src="/images/icons/whatsapp.svg">
+            </a>
+          </div>
+        </div>
+      </div>
+      <img class="service_screen-man" src="/images/service_screen-man.png">
+    </div>
+    <div class="service_top">
+      <section class="services_repair limiter animate_parent" id="service_price">
+        <div class="hgroup">
+          <h2>Услуги ремонта</h2>
+        </div>
+        <div class="tabs_container">
+          <div class="services_repair-tabs tabs">
+            <button class="tab active" data-tab="snowboard">Ремонт сноубордов</button>
+            <button class="tab" data-tab="ski">Ремонт горных лыж</button>
+          </div>
+         <div class="tabs_content">
+            <div class="services_repair-content tab_content active" data-id="snowboard">
+              <div class="services_repair-text">
+                <div class="mode">Режим работы: ежедневно с 10:00 до 03:00</div>
+                <p>В идеальном случае необходимо проводить сервисное обслуживание сноубордов перед каждым использованием, но пользователи игнорируют эту рекомендацию. Минимально допустимая регулярность обслуживания при еженедельном использовании в выходные — 3-4 раза в течение сезона.</p>
+                <p>Любому спортивному инвентарю необходимо регулярное сервисное и техническое обслуживание. В том числе – лыжам и сноубордам. Для длительной службы оборудования, лучшего хода по ровной поверхности и крутым склонам необходима специальная подготовка.</p>
+                <div class="main_service-contacts">
+                  <p>Перейти в диалог с мастером:</p>
+                  <div class="main_service-links">
+                    <a href="#">
+                      <img src="/images/icons/telegram.svg">
+                    </a>
+                    <a href="#">
+                      <img src="/images/icons/whatsapp.svg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="services_repair-prices">
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Комплексная подготовка (шлифование, заточка, парафин)</div>
+                  <div class="services_repair-price">1500 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Парафин + канты</div>
+                  <div class="services_repair-price">900 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Парафин</div>
+                  <div class="services_repair-price">700 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Заточка канта (по грани)</div>
+                  <div class="services_repair-price">300 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Консервация</div>
+                  <div class="services_repair-price">500 &#8381;</div>
+                </div>
+                <hr>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Срок выполнения</div>
+                  <div class="services_repair-price">от 1 часа до 3 дней</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Гарантия</div>
+                  <div class="services_repair-price">3 месяца</div>
+                </div>                
+              </div>
+              <div class="our-work_list">
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Выпрямление канта<br> горных лыж</div>
+                </div>
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Нанесение парафина<br> на горные лыжи</div>
+                </div>
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Ремонт креплений<br> горных лыж</div>
+                </div>
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Удаление старого<br>  парафина с поверхности</div>
+                </div>
+              </div> 
+            </div>
+            <div class="services_repair-content tab_content" data-id="ski">
+              <div class="services_repair-text">
+                <div class="mode">Режим работы: ежедневно с 10:00 до 03:00</div>
+                <p>В идеальном случае необходимо проводить сервисное обслуживание сноубордов перед каждым использованием, но пользователи игнорируют эту рекомендацию. Минимально допустимая регулярность обслуживания при еженедельном использовании в выходные — 3-4 раза в течение сезона.</p>
+                <p>Любому спортивному инвентарю необходимо регулярное сервисное и техническое обслуживание. В том числе – лыжам и сноубордам. Для длительной службы оборудования, лучшего хода по ровной поверхности и крутым склонам необходима специальная подготовка.</p>
+                <div class="main_service-contacts">
+                  <p>Перейти в диалог с мастером:</p>
+                  <div class="main_service-links">
+                    <a href="#">
+                      <img src="/images/icons/telegram.svg">
+                    </a>
+                    <a href="#">
+                      <img src="/images/icons/whatsapp.svg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="services_repair-prices">
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Комплексная подготовка (шлифование, заточка, парафин)</div>
+                  <div class="services_repair-price">1500 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Парафин + канты</div>
+                  <div class="services_repair-price">900 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Парафин</div>
+                  <div class="services_repair-price">700 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Заточка канта (по грани)</div>
+                  <div class="services_repair-price">300 &#8381;</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Консервация</div>
+                  <div class="services_repair-price">500 &#8381;</div>
+                </div>
+                <hr>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Срок выполнения</div>
+                  <div class="services_repair-price">от 1 часа до 3 дней</div>
+                </div>
+                <div class="services_repair-row">
+                  <div class="services_repair-name">Гарантия</div>
+                  <div class="services_repair-price">3 месяца</div>
+                </div>                
+              </div>
+              <div class="our-work_list">
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Выпрямление канта<br> горных лыж</div>
+                </div>
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Нанесение парафина<br> на горные лыжи</div>
+                </div>
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Ремонт креплений<br> горных лыж</div>
+                </div>
+                <div class="our-work_item">
+                  <div class="our-work_item-text animate">Удаление старого<br>  парафина с поверхности</div>
+                </div>
+              </div> 
+            </div>
+         </div> 
+        </div>            
+      </section>
+      <section class="equipment limiter">
+        <div class="hgroup">
+          <h2>Наше оборудование</h2>
+          <p>У нас инновационное высококачественное оборудование и расходно-технические материалы для подготовки спортивного инвентаря. Мы можем устранить серьезные дефекты и неисправности: расслоение лыж; глубокие царапины; утрата скользящего покрытия.</p>
+        </div>
+        <div class="equipment_content">
+          <div class="equipment_item">
+            <img class="equipment_logo" src="/images/icon.svg" width="111" height="64">
+            <h4>Sigma B<br> Base grinding machines</h4>
+            <p>Ленточно-шлифовальный станок для лыж и сноубордов.<br> Предварительная шлифовка, настройка, холодное вощение или полировка.</p>            
+          </div>
+          <div class="equipment_item">
+            <img class="equipment_logo" src="/images/icon.svg" width="111" height="64">
+            <h4>Waxjet 90/91/92/93<br> Waxing machines</h4>
+            <p>Воскильный аппарат для лыж и сноубордов.<br> Горячее вощение, снятие заусенцев, полировка, браширование.</p>            
+          </div>                    
+        </div>
+        <img class="equipment_img equipment_img__first" src="/images/equipment_1.png">
+        <img class="equipment_img equipment_img__second" src="/images/equipment_2.png">
+      </section>
+    </div>
+    <div class="service_bottom">
+      <section class="works limiter">
+        <div class="hgroup">
+          <h2>Наши работы</h2>
+        </div>
+        <div class="tabs_container">
+          <div class="tabs">
+            <div class="tab active" data-tab="0">Ремонт сноубордов</div>
+            <div class="tab" data-tab="1">Ремонт горных лыж</div>
+            <div class="tab" data-tab="2">Обновление СП сноуборда</div>
+            <div class="tab" data-tab="3">Шлифовка поверхности лыж</div>
+          </div>
+          <div class="tabs_content">
+            <div class="tab_content active" data-id="0">
+              <div class="work_container">
+                <div class="work_slider">
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="work_slider-nav">
+                  <button class="work_slider-left"></button>
+                  <button class="work_slider-right"></button>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content" data-id="1">
+              <div class="work_container">
+                <div class="work_slider">
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="work_slider-nav">
+                  <button class="work_slider-left"></button>
+                  <button class="work_slider-right"></button>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content" data-id="2">
+              <div class="work_container">
+                <div class="work_slider">
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="work_slider-nav">
+                  <button class="work_slider-left"></button>
+                  <button class="work_slider-right"></button>
+                </div>
+              </div>
+            </div>
+            <div class="tab_content" data-id="3">
+              <div class="work_container">
+                <div class="work_slider">
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_2.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_2.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="work_slider-container">
+                    <div class="work_slider-item">
+                      <div class="work_slider-before">
+                        <img src="/images/work_before_1.jpg">
+                        <p>До</p>
+                      </div>
+                      <div class="work_slider-after">
+                        <img src="/images/work_after_1.jpg">
+                        <p>После</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="work_slider-nav">
+                  <button class="work_slider-left"></button>
+                  <button class="work_slider-right"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <section class="contacts limiter">
+      <div class="hgroup">
+        <h2>Есть вопросы? Мы на связи!</h2>
+      </div>
+      <div class="contacts_content">
+        <div class="contacts_row">
+          <div class="contacts_col">
+            <img src="/images/icons/place.svg">
+            <div class="contacts_text">
+              <h4>Адрес</h4>
+              <div class="contact_content">
+                <p>Дмитровское шоссе, пгт. Икша, Набережная улица, 10</p>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_col">
+            <img src="/images/icons/time.svg" loading="lazy">
+            <div class="contacts_text">
+              <h4>Часы работы</h4>
+              <div class="contact_content">
+                <p>Ежедневно с 10:00 до 03:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts_row">
+          <div class="contacts_col">
+            <img src="/images/icons/phone.svg" loading="lazy">
+            <div class="contacts_text">
+              <h4>Телефон</h4>
+              <div class="contact_content">
+                <a href="tel:+74951202489">+7 (495) 120 24 89</a>
+                <a href="tel:+79651096949">+7 (965) 109 69 49</a>
+                <a href="tel:+79060398422">+7 (906) 039 84 22</a>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_col">
+            <img src="/images/icons/mail.svg">
+            <div class="contacts_text">
+              <h4>E-mail</h4>
+              <div class="contact_content">
+                <a href="mailto:snowboard@snow-prokat.ru">snowboard@snow-prokat.ru</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts_row">
+          <div class="contacts_col">
+            <div class="contacts_text">
+              <h4>Сервисный центр:</h4>
+              <div class="contact_content">
+                <a href="tel+79252004060">+7 (925) 200 40 60</a>
+                <div class="contacts-links">
+                  <a href="#">
+                    <img src="/images/icons/telegram.svg" loading="lazy">
+                  </a>
+                  <a href="#">
+                    <img src="/images/icons/whatsapp.svg" loading="lazy">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts_col">
+            <div class="contacts_text">
+              <h4>Мы в соцсетях:</h4>
+              <div class="contact_content">
+                <div class="contacts-links">
+                  <a href="#">
+                    <img src="/images/icons/vk.svg">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contacts_map" id="map"></div>
+    </section>
+    <section class="footer_content limiter">
+      <div class="footer_col">
+        <span><img class="footer_logo" src="/images/logo.svg" loading="lazy"></span>
+        <div class="footer_contacts">
+          <div class="header_phone">
+            <a href="tel:+74951202489" class="header_phone-top header_contacts-top">+7 (495) 120 24 89</a>
+            <div class="header_contacts-bottom">Ежедневно 10:00 - 03:00</div>
+          </div>
+          <div class="header_address">
+            <div class="header_address-top header_contacts-top">Дмитровское шоссе</div>
+            <div class="header_contacts-bottom">Икша, Набережная улица, 10</div>
+          </div>
+        </div>
+        <div class="footer_copyright">Copyright © 2022 DoSki</div>
+      </div>
+      <nav class="footer_col footer_halfcol">
+        <ul class="footer_menu">
+          <li class="footer_menu-section"><a href="/rental/">Прокат</a></li>
+          <li><a href="/rental/snowboard/">Сноубордов</a></li>
+          <li><a href="/rental/ski/">Горных лыж</a></li>
+          <li><a href="/rental/clothing/">Одежды</a></li>
+          <li><a href="/rental/accessories/">Аксессуаров</a></li>
+        </ul>
+      </nav>
+      <nav class="footer_col footer_halfcol">
+        <ul class="footer_menu">
+          <li class="footer_menu-section"><a href="/about/">О нас</a></li>
+          <li><a href="/about/">О компании</a></li>
+          <li><a href="/about/conditions/">Условия проката</a></li>
+        </ul>
+      </nav>
+      <nav class="footer_col">
+        <ul class="footer_menu">
+          <li class="footer_menu-section"><a href="/service/">Сервис</a></li>
+          <li class="footer_menu-section"><a href="/prices/">Цены</a></li>
+          <li class="footer_menu-section"><a href="/blog/">Блог</a></li>
+          <li class="footer_menu-section"><a href="/contacts/">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="footer_col">
+        <div class="contacts_text">
+          <h4>Мы в соцсетях:</h4>
+          <div class="contact_content">
+            <div class="contacts-links">
+              <a href="#">
+                <img src="/images/icons/vk.svg" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contacts_text">
+          <h4>Сервисный центр:</h4>
+          <div class="contact_content">
+            <div class="contacts-links">
+              <a href="#">
+                <img src="/images/icons/telegram.svg" loading="lazy">
+              </a>
+              <a href="#">
+                <img src="/images/icons/whatsapp.svg" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <div class="fixed_button" data-modal="calculator"></div>
+  <div class="overlay"></div>
+  <div class="modal calculator" data-id="calculator">
+    <div class="close"></div>
+    <h2>Выберите количество суток и нужное снаряжение</h2>
+    <div class="calculator_content">
+      <div class="calculator_left">
+        <div class="calculator_time">
+          <button class="button_time active" data-day="1">1 сутки</button>
+          <button class="button_time" data-day="2">2 суток</button>
+          <button class="button_time" data-day="3">3 суток</button>
+          <button class="button_time" data-day="4">4 суток</button>
+          <button class="button_time" data-day="5">5 суток</button>
+          <button class="button_time" data-day="6">6 суток</button>
+          <button class="button_time" data-day="7">7 суток</button>
+          <input class="input_time" data-day="0" type="number" placeholder="Ввести (до 30 суток)" min="1" max="30">
+        </div>
+        <div class="calculator_bottom">
+          Итого: <span class="calculator_sum">0</span> &#8381;
+        </div>
+      </div>
+      <div class="calculator_right">
+        <div class="calculator_inventory">
+          <div class="calculator_inventory-item">
+            <h4>Комплект:<br> Горные лыжи / Сноуборд / Ботинки</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="900"  data-2="1700" data-3="2400" data-4="3000" data-5="3600" data-6="4200" data-7="4800">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Горные лыжи</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="700"  data-2="1100" data-3="1500" data-4="1900" data-5="2300" data-6="2700" data-7="3100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Сноуборд</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="700"  data-2="1100" data-3="1500" data-4="1900" data-5="2300" data-6="2700" data-7="3100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Маска</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="200"  data-2="350" data-3="500" data-4="650" data-5="800" data-6="950" data-7="1100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Ботинки</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="400"  data-2="700" data-3="900" data-4="1100" data-5="1300" data-6="1500" data-7="1700">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Шлем</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="200"  data-2="350" data-3="500" data-4="650" data-5="800" data-6="950" data-7="1100">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Перчатки</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="100"  data-2="150" data-3="200" data-4="250" data-5="300" data-6="350" data-7="400">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Куртка</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="300"  data-2="500" data-3="700" data-4="900" data-5="1100" data-6="1300" data-7="1500">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Штаны</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="300"  data-2="500" data-3="700" data-4="900" data-5="1100" data-6="1300" data-7="1500">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+          <div class="calculator_inventory-item">
+            <h4>Куртка + штаны</h4>
+            <div class="calculator_inventory-count">
+              <button class="calculator_inventory-minus">-</button>
+              <input type="number" class="calculator_inventory-number" value="0" step="1" min="0" max="99" data-1="500"  data-2="900" data-3="1300" data-4="1700" data-5="2100" data-6="2500" data-7="2900">
+              <button class="calculator_inventory-plus">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator_bottom calculator_bottom__mobile">
+        Итого: <span class="calculator_sum">0</span> &#8381;
+      </div>
+    </div>
+  </div>
+</body>
+</html>
